@@ -23,7 +23,7 @@
 
 	<dependencyManagement>
 		<dependencies>
-			<!-- spring -->
+			<!-- spring1 -->
 			<dependency>
 				<groupId>org.springframework.cloud</groupId>
 				<artifactId>spring-cloud-dependencies</artifactId>
