@@ -19,6 +19,7 @@ public class DiscoveryServiceImpl implements DiscoveryService {
 	
 	@Override
 	public String discovery() {
+		// 通过微服务名调用api
 		return restTemplate.getForObject("http://EUREKA-CLIENT-DEMO/discovery", String.class);
 	}
 
