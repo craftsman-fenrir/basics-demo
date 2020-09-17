@@ -3,6 +3,7 @@ package com.fenrir;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
+import org.springframework.cloud.netflix.hystrix.dashboard.EnableHystrixDashboard;
 import org.springframework.cloud.openfeign.EnableFeignClients;
 
 /**
@@ -12,16 +13,20 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
  * @EnableFeignClients - feign核心配置，开启feign功能
  * feign默认集成ribbon，feign是面向接口的，ribbon是面向服务的
  * feign更像是对ribbon + restTemplate的优化
+ * feign默认集成了hystrix，需要去配置文件开启hystrix
+ * @EnableHystrixDashboard - hystrix dashboard配置，开启hystrix dashboard，默认路径/hystrix
+ * feign没有默认集成仪表盘
  * @author fenrir
  *
  */
 @SpringBootApplication
 @EnableEurekaClient
 @EnableFeignClients
-public class FeignDemoApplication {
+@EnableHystrixDashboard
+public class FeignHystrixDemoApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(FeignDemoApplication.class, args);
+		SpringApplication.run(FeignHystrixDemoApplication.class, args);
 	}
 
 }

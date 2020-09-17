@@ -3,6 +3,8 @@ package com.fenrir;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
+import org.springframework.cloud.netflix.hystrix.EnableHystrix;
+import org.springframework.cloud.netflix.hystrix.dashboard.EnableHystrixDashboard;
 import org.springframework.cloud.netflix.ribbon.RibbonClient;
 
 import com.netflix.loadbalancer.RandomRule;
@@ -11,6 +13,8 @@ import com.netflix.loadbalancer.RandomRule;
  * application - spring boot启动类
  * @SpringBootApplication - spring boot启动配置
  * @EnableEurekaClient - eureka配置，把该服务配置为eureka注册中心的客户端
+ * @EnableHystrix - hystrix配置，开启熔断功能
+ * @EnableHystrixDashboard - hystrix dashboard配置，开启hystrix dashboard，默认路径/hystrix
  * @RibbonClient - ribbon核心配置，可选，定义均衡负载的规则（默认ZoneAvoidanceRule）和微服务名字（不写用从配置获取默认名）
  * RoundRobinRule 轮询
  * RandomRule 随机
@@ -24,11 +28,13 @@ import com.netflix.loadbalancer.RandomRule;
  */
 @SpringBootApplication
 @EnableEurekaClient
+@EnableHystrix
+@EnableHystrixDashboard
 @RibbonClient(value = "FEIGN-HYSTRIX-DEMO", configuration = RandomRule.class)
-public class RibbonDemoApplication {
+public class RibbonHystrixDemoApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(RibbonDemoApplication.class, args);
+		SpringApplication.run(RibbonHystrixDemoApplication.class, args);
 	}
 
 }

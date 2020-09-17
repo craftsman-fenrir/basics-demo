@@ -12,6 +12,8 @@
 		<module>eureka-client-demo</module>
 		<module>eureka-server-demo</module>
 		<module>feign-demo</module>
+		<module>feign-hystrix-demo</module>
 		<module>ribbon-demo</module>
+		<module>ribbon-hystrix-demo</module>
 	</modules>
 </project>
