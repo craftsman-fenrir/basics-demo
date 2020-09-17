@@ -9,6 +9,7 @@
 	<packaging>pom</packaging>
 
 	<modules>
+		<module>eureka-client-demo</module>
 		<module>eureka-server-demo</module>
 	</modules>
 </project>
