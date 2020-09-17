@@ -23,11 +23,11 @@
 
 	<dependencyManagement>
 		<dependencies>
-			<!-- spring1 -->
 			<dependency>
 				<groupId>org.springframework.cloud</groupId>
 				<artifactId>spring-cloud-dependencies</artifactId>
-				<version>Greenwich.SR5</version>
+				<version>Greenwich.BUILD-SNAPSHOT</version>
+				<!-- <version>Greenwich.SR5</version> -->
 				<type>pom</type>
 				<scope>import</scope>
 			</dependency>
