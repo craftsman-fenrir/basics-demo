@@ -30,7 +30,7 @@ import com.netflix.loadbalancer.RandomRule;
 @EnableEurekaClient
 @EnableHystrix
 @EnableHystrixDashboard
-@RibbonClient(value = "FEIGN-HYSTRIX-DEMO", configuration = RandomRule.class)
+@RibbonClient(value = "RIBBON-HYSTRIX-DEMO", configuration = RandomRule.class)
 public class RibbonHystrixDemoApplication {
 
 	public static void main(String[] args) {

@@ -24,7 +24,7 @@ import com.netflix.loadbalancer.RandomRule;
  */
 @SpringBootApplication
 @EnableEurekaClient
-@RibbonClient(value = "FEIGN-HYSTRIX-DEMO", configuration = RandomRule.class)
+@RibbonClient(value = "RIBBON-HYSTRIX-DEMO", configuration = RandomRule.class)
 public class RibbonDemoApplication {
 
 	public static void main(String[] args) {
