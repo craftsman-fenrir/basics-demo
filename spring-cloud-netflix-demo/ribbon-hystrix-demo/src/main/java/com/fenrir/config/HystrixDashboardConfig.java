@@ -14,14 +14,16 @@ import com.netflix.hystrix.contrib.metrics.eventstream.HystrixMetricsStreamServl
 @Configuration
 public class HystrixDashboardConfig {
 
-	@Bean
-    public ServletRegistrationBean<HystrixMetricsStreamServlet> getServlet() {
-        HystrixMetricsStreamServlet streamServlet = new HystrixMetricsStreamServlet();
-        ServletRegistrationBean<HystrixMetricsStreamServlet> registrationBean = new ServletRegistrationBean<>(streamServlet);
-        registrationBean.setLoadOnStartup(1);
-        registrationBean.addUrlMappings("/hystrix.stream");
-        registrationBean.setName("HystrixMetricsStreamServlet");
-        return registrationBean;
-    }
+	
+	  @Bean
+	  public ServletRegistrationBean<HystrixMetricsStreamServlet> getServlet() {
+		  HystrixMetricsStreamServlet streamServlet = new HystrixMetricsStreamServlet();
+		  ServletRegistrationBean<HystrixMetricsStreamServlet> registrationBean = new ServletRegistrationBean<>(streamServlet);
+		  registrationBean.setLoadOnStartup(1);
+		  registrationBean.addUrlMappings("/actuator/hystrix.stream");
+		  registrationBean.setName("HystrixMetricsStreamServlet");
+		  return registrationBean;
+	  }
+	 
 	
 }
