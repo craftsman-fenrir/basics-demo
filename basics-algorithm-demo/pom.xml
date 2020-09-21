@@ -5,10 +5,5 @@
 		<artifactId>basics-demo</artifactId>
 		<version>1.0.0</version>
 	</parent>
-	<artifactId>spring-cloud-alibaba-demo</artifactId>
-	<packaging>pom</packaging>
-	
-	<modules>
-		<module>nacos-demo</module>
-	</modules>
+	<artifactId>basics-algorithm-demo</artifactId>
 </project>
