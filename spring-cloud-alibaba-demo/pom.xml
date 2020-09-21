@@ -9,6 +9,6 @@
 	<packaging>pom</packaging>
 	
 	<modules>
-		<module>nacos-demo</module>
+		<module>nacos-client-demo</module>
 	</modules>
 </project>

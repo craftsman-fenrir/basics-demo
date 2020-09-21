@@ -27,7 +27,7 @@ import org.springframework.web.multipart.MultipartFile;
 @RestController
 public class FileController {
 
-	@Value("${yan.file.path}")
+	@Value("${fenrir.file.path}")
 	private String filePath;
 	
 	/**
