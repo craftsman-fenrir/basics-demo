@@ -38,6 +38,11 @@
 			<artifactId>spring-cloud-starter-netflix-hystrix</artifactId>
 		</dependency>
 		
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+		</dependency>
+		
 		<!-- hystrix dashboard 依赖begin -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
