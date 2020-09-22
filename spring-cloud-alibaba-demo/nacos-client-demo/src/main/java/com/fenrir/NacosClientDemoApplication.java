@@ -18,10 +18,14 @@ import org.springframework.web.bind.annotation.RestController;
 @EnableDiscoveryClient
 public class NacosClientDemoApplication {
 
+	// 访问http://ip:port/actuator/nacos-discovery可以看到nacos的微服务信息
+	
 	public static void main(String[] args) {
         SpringApplication.run(NacosClientDemoApplication.class, args);
     }
 
+//	nacos已经跑通，研究下nocos的详细配置以及集成ribbon跟feign，研究下nacos的服务配置
+//	JAX-RS是什么?
     @RestController
     public class EchoController {
         @GetMapping(value = "/echo/{message}")

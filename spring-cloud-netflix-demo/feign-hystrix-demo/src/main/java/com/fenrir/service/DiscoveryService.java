@@ -3,6 +3,9 @@ package com.fenrir.service;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
 
+import com.fenrir.entity.BasicListResponseGenericityVO;
+import com.fenrir.entity.BasicResponseGenericityVO;
+import com.fenrir.entity.DataVO;
 import com.fenrir.hystrix.DiscoveryHystrix;
 
 /**
@@ -14,6 +17,6 @@ import com.fenrir.hystrix.DiscoveryHystrix;
 public interface DiscoveryService {
 
 	@GetMapping(value = "/discovery")
-	String discovery();
+	BasicResponseGenericityVO<BasicListResponseGenericityVO<DataVO>> discovery();
 	
 }

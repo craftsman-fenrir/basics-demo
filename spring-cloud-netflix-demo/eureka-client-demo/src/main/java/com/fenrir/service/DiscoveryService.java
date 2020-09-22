@@ -1,21 +1,19 @@
 package com.fenrir.service;
 
-import org.springframework.cloud.openfeign.FeignClient;
-import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.stereotype.Service;
 
 import com.fenrir.entity.BasicListResponseGenericityVO;
 import com.fenrir.entity.BasicResponseGenericityVO;
 import com.fenrir.entity.DataVO;
 
 /**
- * service - 使用feign调用其他微服务
+ * service - 服务发现
  * @author fenrir
  *
  */
-@FeignClient(value = "EUREKA-CLIENT-DEMO")
+@Service
 public interface DiscoveryService {
 
-	@GetMapping(value = "/discovery")
 	BasicResponseGenericityVO<BasicListResponseGenericityVO<DataVO>> discovery();
 	
 }

@@ -1,7 +1,11 @@
 package com.fenrir.hystrix;
 
+import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Component;
 
+import com.fenrir.entity.BasicListResponseGenericityVO;
+import com.fenrir.entity.BasicResponseGenericityVO;
+import com.fenrir.entity.DataVO;
 import com.fenrir.service.DiscoveryService;
 
 /**
@@ -14,8 +18,11 @@ import com.fenrir.service.DiscoveryService;
 public class DiscoveryHystrix implements DiscoveryService {
 
 	@Override
-	public String discovery() {
-		return "feign hystrix demo调用第三方微服务时出现了异常并且熔断了";
+	public BasicResponseGenericityVO<BasicListResponseGenericityVO<DataVO>> discovery() {
+		BasicResponseGenericityVO<BasicListResponseGenericityVO<DataVO>> basicResponseGenericity = new BasicResponseGenericityVO<>();
+		basicResponseGenericity.setCode(HttpStatus.INTERNAL_SERVER_ERROR.value());
+		basicResponseGenericity.setMessage("feign hystrix demo调用第三方微服务时出现了异常并且熔断了");
+		return basicResponseGenericity;
 	}
 	
 }
