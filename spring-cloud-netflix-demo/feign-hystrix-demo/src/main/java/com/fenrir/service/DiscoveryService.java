@@ -18,5 +18,5 @@ public interface DiscoveryService {
 
 	@GetMapping(value = "/discovery")
 	BasicResponseGenericityVO<BasicListResponseGenericityVO<DataVO>> discovery();
-	
+
 }
