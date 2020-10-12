@@ -10,5 +10,6 @@
 	
 	<modules>
 		<module>nacos-client-demo</module>
+		<module>nacos-config-demo</module>
 	</modules>
 </project>
