@@ -37,22 +37,10 @@ public class EchoController {
     /**
      * 做nacos动态配置测试的接口
      * @return
-     */
-    @GetMapping(value = "/getConfig", produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
-    public String getConfig() {
-        return  new StringBuffer("{\"fenrir.nacos.test-data\":\"")
-    			.append(testData)
-    			.append("\"}")
-    			.toString();
-    }
-    
-    /**
-     * 做nacos动态配置测试的接口
-     * @return
      * @throws NacosException 
      */
-    @GetMapping(value = "/test", produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
-    public String test() throws NacosException {
+    @GetMapping(value = "/getConfig", produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
+    public String getConfig() throws NacosException {
     	// 配置列表的Data Id
 		String dataId = "fenrir-test-id";
 		// 配置列表的Group
