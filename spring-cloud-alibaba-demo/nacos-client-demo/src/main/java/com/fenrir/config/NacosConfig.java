@@ -27,5 +27,5 @@ public class NacosConfig {
 		properties.put("serverAddr", serverAddr);
 		return NacosFactory.createConfigService(properties);
 	}
-	
+
 }

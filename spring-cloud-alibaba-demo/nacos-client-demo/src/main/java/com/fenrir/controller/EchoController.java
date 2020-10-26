@@ -37,7 +37,7 @@ public class EchoController {
     /**
      * 做nacos动态配置测试的接口
      * @return
-     * @throws NacosException 
+     * @throws NacosException
      */
     @GetMapping(value = "/getConfig", produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
     public String getConfig() throws NacosException {

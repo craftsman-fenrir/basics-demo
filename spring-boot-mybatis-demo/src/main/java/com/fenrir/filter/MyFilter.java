@@ -19,6 +19,7 @@ import org.springframework.stereotype.Component;
  * @author fenrir
  *
  */
+//@WebFilter()
 @Component
 public class MyFilter implements Filter {
 	
