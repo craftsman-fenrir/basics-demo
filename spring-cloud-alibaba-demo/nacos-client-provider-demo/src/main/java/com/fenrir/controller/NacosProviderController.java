@@ -16,7 +16,7 @@ import com.alibaba.nacos.api.exception.NacosException;
  *
  */
 @RestController
-public class EchoController {
+public class NacosProviderController {
 	
 	@Value("${fenrir.nacos.test-data}")
 	private String testData = null;
@@ -29,7 +29,7 @@ public class EchoController {
 	 * @param message
 	 * @return
 	 */
-    @GetMapping(value = "/echo/{message}")
+    @GetMapping(value = "/provider/echo/{message}")
     public String echo(@PathVariable String message) {
         return "Hello Nacos Discovery " + message;
     }
@@ -39,7 +39,7 @@ public class EchoController {
      * @return
      * @throws NacosException
      */
-    @GetMapping(value = "/getConfig", produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
+    @GetMapping(value = "/provider/getConfig", produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
     public String getConfig() throws NacosException {
     	// 配置列表的Data Id
 		String dataId = "fenrir-test-id";

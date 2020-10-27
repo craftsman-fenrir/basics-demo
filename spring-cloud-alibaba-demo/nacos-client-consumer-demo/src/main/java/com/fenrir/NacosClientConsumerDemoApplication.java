@@ -16,12 +16,12 @@ import org.springframework.cloud.context.config.annotation.RefreshScope;
 @SpringBootApplication
 @EnableDiscoveryClient
 @RefreshScope
-public class NacosClientDemoApplication {
+public class NacosClientConsumerDemoApplication {
 
 	// 访问http://ip:port/actuator/nacos-discovery可以看到nacos的微服务信息
 
 	public static void main(String[] args) {
-        SpringApplication.run(NacosClientDemoApplication.class, args);
+        SpringApplication.run(NacosClientConsumerDemoApplication.class, args);
     }
 
 }

@@ -5,8 +5,8 @@
 		<artifactId>spring-cloud-alibaba-demo</artifactId>
 		<version>1.0.0</version>
 	</parent>
-	<artifactId>nacos-client-demo</artifactId>
-	
+	<artifactId>nacos-client-provider-demo</artifactId>
+
 	<dependencies>
 		<dependency>
             <groupId>org.springframework.boot</groupId>
@@ -30,13 +30,13 @@
 	</dependencies>
 	
 	<build>
-		<finalName>nacos-client-demo</finalName>
+		<finalName>nacos-client-provider-demo</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 				<configuration>
-					<mainClass>com.fenrir.NacosClientDemoApplication</mainClass>
+					<mainClass>com.fenrir.NacosClientProviderDemoApplication</mainClass>
 				</configuration>
 				<executions>
 					<execution>

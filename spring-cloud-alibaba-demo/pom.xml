@@ -10,6 +10,7 @@
 	
 	<modules>
 		<module>nacos-client-demo</module>
-		<module>nacos-config-demo</module>
+		<module>nacos-client-consumer-demo</module>
+		<module>nacos-client-provider-demo</module>
 	</modules>
 </project>
