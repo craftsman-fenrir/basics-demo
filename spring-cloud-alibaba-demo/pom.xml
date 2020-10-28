@@ -9,8 +9,11 @@
 	<packaging>pom</packaging>
 	
 	<modules>
-		<module>nacos-client-demo</module>
-		<module>nacos-client-consumer-demo</module>
+		<!-- nacos客户端，其他微服务的服务提供者 -->		
 		<module>nacos-client-provider-demo</module>
+		<!-- nacos客户端，基础的微服务消费者 -->
+		<module>nacos-client-consumer-demo</module>
+		<!-- nacos客户端，feign实现的微服务消费者 -->
+		<module>nacos-client-feign-consumer-demo</module>
 	</modules>
 </project>
