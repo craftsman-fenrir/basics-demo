@@ -4,21 +4,21 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.fenrir.service.NacosFeignConsumerService;
+import com.fenrir.service.NacosFeignSentinelConsumerService;
 
 /**
- * controller - 微服务消费端
+ * controller - 微服务消费者
  * @author fenrir
  *
  */
 @RestController
-public class NacosFeignConsumerController {
+public class NacosFeignSentinelConsumerController {
 
 	/**
 	 * feign
 	 */
 	@Autowired
-    private NacosFeignConsumerService nacosFeignConsumerService;
+    private NacosFeignSentinelConsumerService nacosFeignSentinelConsumerService;
 
 	/**
 	 * 消费服务端
@@ -26,7 +26,7 @@ public class NacosFeignConsumerController {
 	 */
     @GetMapping(value = "/consumer/echo")
     public String echo() {
-        return nacosFeignConsumerService.echo("Hi Feign");
+        return nacosFeignSentinelConsumerService.echo("Hi Feign");
     }
 
 }
