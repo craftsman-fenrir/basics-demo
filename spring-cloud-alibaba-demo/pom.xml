@@ -17,5 +17,7 @@
 		<module>nacos-client-feign-consumer-demo</module>
 		<!-- nacos客户端，feign实现的微服务消费者，并且集成了sentinel -->
 		<module>nacos-client-feign-sentinel-consumer-demo</module>
+		<!-- spring官方的spring cloud技术，用来取代zuul -->
+		<module>spring-cloud-gateway-demo</module>
 	</modules>
 </project>
