@@ -11,6 +11,7 @@
 		<module>basics-algorithm-demo</module>
 		<module>spring-boot-mybatis-demo</module>
 		<module>spring-boot-mybatis-redis-demo</module>
+		<module>spring-boot-shiro-demo</module>
 		<module>spring-boot-swagger2-demo</module>
 		<module>spring-cloud-alibaba-demo</module>
 		<module>spring-cloud-netflix-demo</module>
@@ -89,6 +90,13 @@
 				<groupId>redis.clients</groupId>
 				<artifactId>jedis</artifactId>
 				<version>3.3.0</version>
+			</dependency>
+
+			<!-- shiro -->
+			<dependency>
+				<groupId>org.apache.shiro</groupId>
+				<artifactId>shiro-spring</artifactId>
+				<version>1.4.0</version>
 			</dependency>
 
 			<!-- poi -->
